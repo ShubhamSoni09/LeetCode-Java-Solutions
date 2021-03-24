@@ -1,0 +1,32 @@
+import java.util.*;
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        List<Integer> resultArray = new ArrayList<>();
+        int sum = 0;
+        for(int i = 0;i<nums.length;i++){
+            for(int j = i+1;j<nums.length;j++){
+            if(i == nums.length - 1){
+                break;
+            }
+            else{
+            sum = nums[i] + nums[j];
+            }
+            if(sum == target){
+                resultArray.add(i);
+                resultArray.add(j);
+                break;
+            }
+            else{
+                continue;
+            }
+        }
+        }
+        Object[] finalArray = resultArray.toArray();
+        int[] final1 = new int[finalArray.length];
+        
+        for(int i =0;i<finalArray.length;i++){
+            final1[i] = (Integer)finalArray[i];
+        }
+         return final1;
+    }
+}
