@@ -1,0 +1,30 @@
+class Solution {
+    public boolean isPalindrome(int x) {
+        int result = 0;
+        int number = 0;
+        int orignalNumber = x;
+        
+        if(orignalNumber<0){
+            return false;
+        }
+        
+    while(x != 0){
+        number = x % 10;
+        result = result * 10 + number;
+        x /= 10;
+    }
+        
+        
+        System.out.println(result);
+       
+        
+        
+        if(orignalNumber == result){
+            return true;
+        }
+        else{
+            return false;
+        }
+        
+    }
+}
